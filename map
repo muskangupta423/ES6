@@ -1,0 +1,53 @@
+let myMap=new Map([['a1','hello'],['b2','good bye']]);
+undefined
+console.log(myMap);
+VM938:1 Map(2) {"a1" => "hello", "b2" => "good bye"}
+undefined
+myMap.set('c3','foo');
+Map(3) {"a1" => "hello", "b2" => "good bye", "c3" => "foo"}
+myMap.delete('a1');
+true
+console.log(myMap);
+VM1141:1 Map(2) {"b2" => "good bye", "c3" => "foo"}
+undefined
+
+//weird situation-
+myMap.set(+0,"test");
+Map(3) {"b2" => "good bye", "c3" => "foo", 0 => "test"}
+myMap.get(-0);
+"test"
+
+//Iterate over map key, value pairs
+for(const k of myMap.keys()){
+    console.log(k);}
+VM1495:2 b2
+VM1495:2 c3
+VM1495:2 0
+undefined
+
+for(const k of myMap.values()){
+    console.log(k);}
+VM1515:2 good bye
+VM1515:2 foo
+VM1515:2 test
+undefined
+
+for(const [k,v] of myMap.entries()){ //OR for(const [k,v] of myMap)
+    console.log(k,v);}
+VM1680:2 b2 good bye
+VM1680:2 c3 foo
+VM1680:2 0 "test"
+undefined
+
+//convert map keys into array
+const arr=[...myMap.keys()]
+undefined
+console.log(arr)
+VM1786:1 (3) ["b2", "c3", 0]
+undefined
+
+//convert map values into array
+const arr2=[...myMap.values()]
+undefined
+console.log(arr2)
+VM1824:1 (3) ["good bye", "foo", "test"]
