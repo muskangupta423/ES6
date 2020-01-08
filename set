@@ -1,0 +1,32 @@
+let myArray=[11,22,34,65,34];
+undefined
+let mySet=new Set(myArray);
+undefined
+console.log(mySet);
+VM235:1 Set(4) {11, 22, 34, 65}
+undefined
+mySet.add(100);
+Set(5) {11, 22, 34, 65, 100}
+mySet.add("100");
+Set(6) {11, 22, 34, 65, 100, …}
+console.log(mySet);
+VM353:1 Set(6) {11, 22, 34, 65, 100, …}
+undefined
+mySet.add(101);
+Set(7) {11, 22, 34, 65, 100, …}[[Entries]]0: 111: 222: 343: 654: 1005: "100"6: 101size: (...)__proto__: Set
+mySet.add({1:"a",2:"b"});
+Set(8) {11, 22, 34, 65, 100, …}[[Entries]]0: 111: 222: 343: 654: 1005: "100"6: 1017: value: {1: "a", 2: "b"}size: (...)__proto__: Set
+mySet.delete(34);
+true
+mySet.delete(22);
+true
+mySet.delete(11);
+true
+console.log(mySet);
+VM561:1 Set(5) {65, 100, "100", 101, {…}}
+undefined
+mySet.clear();
+undefined
+console.log(mySet);
+VM611:1 Set(0) {}
+undefined
