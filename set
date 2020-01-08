@@ -30,4 +30,5 @@ undefined
 console.log(mySet);
 VM611:1 Set(0) {}
 undefined
- 
+console.log(mySet.size);
+VM716:1 0
